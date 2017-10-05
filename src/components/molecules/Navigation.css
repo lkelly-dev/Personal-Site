@@ -1,0 +1,15 @@
+.activeLink {
+  color: #8fa1b3 !important;
+}
+
+.activeLink::before {
+  opacity: 1 !important;
+  top: 0px;
+  transform: translateY(0px) !important;
+}
+
+.activeLink::after {
+  opacity: 1 !important;
+  bottom: 0px;
+  transform: translateY(0px) !important;
+}
