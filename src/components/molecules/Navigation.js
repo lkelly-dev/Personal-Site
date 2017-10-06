@@ -82,6 +82,8 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
+const ExternalLink = StyledLink.withComponent("a");
+
 class Navigation extends Component {
   render() {
     return (
@@ -94,9 +96,12 @@ class Navigation extends Component {
         >
           Home
         </StyledLink>
-        <StyledLink to="/blog" activeClassName="activeLink">
+        {/* <StyledLink to="/blog" activeClassName="activeLink">
           Blog
-        </StyledLink>
+        </StyledLink> */}
+        <ExternalLink href="https://medium.com/@liamkelly_46694" activeClassName="activeLink">
+          Blog
+        </ExternalLink>
         <StyledLink exact={true} to="/resume" activeClassName="activeLink">
           Resumé
         </StyledLink>
