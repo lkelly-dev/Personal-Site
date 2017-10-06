@@ -58,6 +58,9 @@ const AboutSection = styled.div`
     margin-left: 0px;
     animation: ${fadeFromTop} 1.22s cubic-bezier(.36,.07,.19,.97) both;
     animation-delay: .25s;
+    margin: 0 auto;
+    float: none;
+      margin-bottom: 1rem;
 
     `};
 `;
@@ -148,7 +151,7 @@ const Liam = styled.h2`
   margin-top: 0rem;
 `;
 
-class About extends Component {
+class SideBar extends Component {
   render() {
     return (
       <AboutSection>
@@ -167,4 +170,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default SideBar;

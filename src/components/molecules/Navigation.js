@@ -102,6 +102,9 @@ class Navigation extends Component {
         <ExternalLink href="https://medium.com/@liamkelly_46694" activeClassName="activeLink">
           Blog
         </ExternalLink>
+        <StyledLink exact={true} to="/about" activeClassName="activeLink">
+          About
+        </StyledLink>
         <StyledLink exact={true} to="/resume" activeClassName="activeLink">
           Resumé
         </StyledLink>

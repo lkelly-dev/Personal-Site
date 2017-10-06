@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import App from "./App";
 import Resume from "./components/organisms/resume";
+import About from "./components/organisms/about";
 
 class Routes extends Component {
   render() {
@@ -11,6 +12,7 @@ class Routes extends Component {
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/resume" component={Resume} />
+          <Route path="/about" component={About} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>

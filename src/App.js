@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
-import About from "./components/molecules/About";
+import SideBar from "./components/molecules/SideBar";
 import Work from "./components/molecules/Work";
 import Navigation from "./components/molecules/Navigation";
 
@@ -47,7 +47,7 @@ export default class App extends Component {
       <SiteContainer>
         <Navigation />
         <Home>
-          <About />
+          <SideBar />
           <Work />
         </Home>
       </SiteContainer>
