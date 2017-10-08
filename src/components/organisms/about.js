@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
 import Navigation from "../molecules/Navigation";
-
+import { SocialIcon } from "react-social-icons";
 import cartoonPic from "./images/liam_cartoon.png";
 import liamPic from "./images/liam.png";
 
@@ -28,6 +28,23 @@ const Content = styled.div`
   margin: 0 auto;
   margin-top: 75px;
   text-align: center;
+`;
+
+const SocialDiv = styled.div`
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+`;
+
+const SocialIconStyled = styled(SocialIcon)`
+  text-decoration: none;
+  background-image: none;
+  text-shadow: none;
+  height: 2rem !important;
+  width: 2rem !important;
+  margin: 7px;
+  &:hover {
+  }
 `;
 
 const Bio = styled.p`
@@ -74,6 +91,11 @@ class About extends Component {
             tale honestatis referrentur no sea. Pri fastidii consequat adversarium ne, id vix
             mediocrem torquatos.
           </Bio>
+          <SocialDiv>
+            <SocialIconStyled color="#e48146" url="https://github.com/lkelly-dev" />
+            <SocialIconStyled color="#3586e1" url="https://www.linkedin.com/in/liamkelly3/" />
+            <SocialIconStyled color="#e48146" url="mailto:me@liamckelly.com" network="email" />
+          </SocialDiv>
         </Content>
       </PageContainer>
     );
