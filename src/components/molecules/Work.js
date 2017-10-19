@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import Project from "../atoms/Project";
-//import Extra from "../atoms/Extra"
+import Contact from "../atoms/Contact";
 
 import dwmc from "./images/dwmc.png";
 import coursedistance from "./images/course-distance.png";
@@ -54,6 +54,7 @@ const WorkSection = styled.div`
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  z-index: 50;
 
   ${media.desktop`
       margin-left: 25%;
@@ -94,6 +95,7 @@ class Work extends Component {
             </Project>
           );
         }, this)}
+        <Contact />
       </WorkSection>
     );
   }

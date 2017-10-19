@@ -46,6 +46,7 @@ const AboutSection = styled.div`
   margin-bottom: 1rem;
   max-width: 450px;
   opacity: 0;
+  z-index: 100;
   ${media.desktop`
         width: 30%;
         float: left;
