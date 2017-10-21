@@ -25,7 +25,7 @@ const Home = styled.div`
   margin-left: auto;
   background-color: #fafbfc;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: table;
   ${media.desktop`
 			max-width: 1070px;
@@ -37,7 +37,7 @@ const Home = styled.div`
 const SiteContainer = styled.div`
   background-color: #fafbfc;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: table;
 `;
 

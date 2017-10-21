@@ -26,14 +26,14 @@ const ResumeFrame = styled.iframe`
 `;
 
 const PageContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   background-color: #fafbfc;
   display: table;
   height: 95vh;
 `;
 
 const ResumeContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   background-color: #fafbfc;
   display: table;
   height: 100%;
