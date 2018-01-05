@@ -84,12 +84,11 @@ class About extends Component {
           <ProfilePic />
           <h2>Liam Kelly</h2>
           <Bio>
-            Lorem ipsum dolor sit amet, his no velit fastidii oportere, cu ignota maluisset
-            philosophia his, in ferri omnis usu. Id eum accumsan theophrastus. Pro ludus mediocrem
-            tincidunt ne. Ad justo praesent definiebas vel, in nec summo salutandi, probo doctus ut
-            eos. Pri in quando vocibus, volumus rationibus at his. Id vix error iriure detracto,
-            tale honestatis referrentur no sea. Pri fastidii consequat adversarium ne, id vix
-            mediocrem torquatos.
+            I am a 20 year old Web Developer who is excited to enter the work force. I love
+            everything that has to do with Web design & development and specialize in front end
+            work. I am experienced in all stages of the development cycle for web applications and
+            am constantly learning through my personal and freelance projects. <br /> <br />
+            References and project demos available upon request.
           </Bio>
           <SocialDiv>
             <SocialIconStyled color="#e48146" url="https://github.com/lkelly-dev" />
