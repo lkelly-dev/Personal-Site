@@ -13,7 +13,7 @@ var projectList = [
     title: "Explore.To",
     description: "A website for finding cool places and events in Toronto.",
     image: exploreto,
-    link: "https://exploreapp.ca"
+    link: "https://www.exploreapp.ca"
   },
   {
     title: "Dude, Where's My Car?",
@@ -44,7 +44,12 @@ const sizes = {
 
 // Iterate through the sizes and create a media template
 const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`@media (max-width: ${sizes[label] / 16}em) {${css(...args)};}`;
+  acc[label] = (...args) =>
+    css`
+      @media (max-width: ${sizes[label] / 16}em) {
+        ${css(...args)};
+      }
+    `;
 
   return acc;
 }, {});
