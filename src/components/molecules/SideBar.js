@@ -12,7 +12,12 @@ const sizes = {
 
 // Iterate through the sizes and create a media template
 const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`@media (max-width: ${sizes[label] / 16}em) {${css(...args)};}`;
+  acc[label] = (...args) =>
+    css`
+      @media (max-width: ${sizes[label] / 16}em) {
+        ${css(...args)};
+      }
+    `;
 
   return acc;
 }, {});
@@ -116,6 +121,7 @@ const ImageAnimate = styled.div`
   display: inline-block;
   width: 100%;
   &:hover {
+    animation-delay: 0.5s;
     animation: ${Rotate} 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
 `;
