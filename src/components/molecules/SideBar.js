@@ -121,8 +121,8 @@ const ImageAnimate = styled.div`
   display: inline-block;
   width: 100%;
   &:hover {
-    animation-delay: 0.5s;
     animation: ${Rotate} 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    animation-delay: 0.5s;
   }
 `;
 
