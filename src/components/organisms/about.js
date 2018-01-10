@@ -21,13 +21,13 @@ const PageContainer = styled.div`
   width: 100%;
   background-color: #fafbfc;
   height: 100%;
-  animation: ${fadeInBottom} 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 `;
 
 const Content = styled.div`
   margin: 0 auto;
   margin-top: 75px;
   text-align: center;
+  animation: ${fadeInBottom} 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 `;
 
 const SocialDiv = styled.div`

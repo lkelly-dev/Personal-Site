@@ -12,7 +12,12 @@ const sizes = {
 
 // Iterate through the sizes and create a media template
 const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`@media (max-width: ${sizes[label] / 16}em) {${css(...args)};}`;
+  acc[label] = (...args) =>
+    css`
+      @media (max-width: ${sizes[label] / 16}em) {
+        ${css(...args)};
+      }
+    `;
 
   return acc;
 }, {});
@@ -30,7 +35,8 @@ const Home = styled.div`
   ${media.desktop`
 			max-width: 1070px;
 		`} ${media.tablet`
-			min-width: 320px;
+      min-width: 320px;
+          margin-top: 40px;
 		`};
 `;
 

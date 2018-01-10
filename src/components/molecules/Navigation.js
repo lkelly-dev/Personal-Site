@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
+import MobileMenu from "../atoms/MobileMenu";
 require("./Navigation.css");
 
 const sizes = {
@@ -11,7 +12,12 @@ const sizes = {
 
 // Iterate through the sizes and create a media template
 const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`@media (max-width: ${sizes[label] / 16}em) {${css(...args)};}`;
+  acc[label] = (...args) =>
+    css`
+      @media (max-width: ${sizes[label] / 16}em) {
+        ${css(...args)};
+      }
+    `;
   return acc;
 }, {});
 
@@ -85,29 +91,65 @@ const StyledLink = styled(NavLink)`
 const ExternalLink = StyledLink.withComponent("a");
 
 class Navigation extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+
+  updateDimensions = () => {
+    var w = window,
+      d = document,
+      documentElement = d.documentElement,
+      body = d.getElementsByTagName("body")[0],
+      width = w.innerWidth || documentElement.clientWidth || body.clientWidth,
+      height = w.innerHeight || documentElement.clientHeight || body.clientHeight;
+
+    this.setState({ width, height });
+  };
+
+  componentWillMount() {
+    this.updateDimensions();
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+  }
   render() {
-    return (
-      <NavBar>
-        <StyledLink
-          exact={true}
-          to="/"
-          activeClassName="activeLink"
-          style={{ marginRight: "0.7em" }}
-        >
-          Home
-        </StyledLink>
-        {/* <StyledLink to="/blog" activeClassName="activeLink">
+    if (this.state.width > 650) {
+      return (
+        <NavBar>
+          <StyledLink
+            exact={true}
+            to="/"
+            activeClassName="activeLink"
+            style={{ marginRight: "0.7em" }}
+          >
+            Home
+          </StyledLink>
+          {/* <StyledLink to="/blog" activeClassName="activeLink">
           Blog
         </StyledLink> */}
-        <ExternalLink href="https://medium.com/@liamkelly_46694" activeClassName="activeLink">
-          Blog
-        </ExternalLink>
-        <StyledLink exact={true} to="/about" activeClassName="activeLink">
-          About
-        </StyledLink>
-        {/* <StyledLink exact={true} to="/resume" activeClassName="activeLink">
+          <ExternalLink href="https://medium.com/@liamkelly_46694" activeClassName="activeLink">
+            Blog
+          </ExternalLink>
+          <StyledLink exact={true} to="/about" activeClassName="activeLink">
+            About
+          </StyledLink>
+          {/* <StyledLink exact={true} to="/resume" activeClassName="activeLink">
           Resumé
         </StyledLink> */}
+        </NavBar>
+      );
+    }
+    return (
+      <NavBar>
+        <MobileMenu />
       </NavBar>
     );
   }
