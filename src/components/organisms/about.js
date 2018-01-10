@@ -18,7 +18,7 @@ const fadeInBottom = keyframes`
 
 //animation: ${fadeInBottom} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 const PageContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   background-color: #fafbfc;
   height: 100%;
   animation: ${fadeInBottom} 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
