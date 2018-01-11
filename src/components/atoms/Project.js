@@ -12,7 +12,12 @@ const sizes = {
 
 // Iterate through the sizes and create a media template
 const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`@media (max-width: ${sizes[label] / 16}em) {${css(...args)};}`;
+  acc[label] = (...args) =>
+    css`
+      @media (max-width: ${sizes[label] / 16}em) {
+        ${css(...args)};
+      }
+    `;
   return acc;
 }, {});
 
@@ -28,14 +33,17 @@ const fadeIn = keyframes`
 const Card = styled.div`
   background: white;
   border-radius: 5px;
-  margin-right: -15px;
-  margin-left: -15px;
+
   position: relative;
   animation: ${fadeIn} 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   max-width: 480px;
 
-  ${media.desktop`
-
+  ${props =>
+    props.home &&
+    css`
+      margin-right: -15px;
+      margin-left: -15px;
+      ${media.desktop`
       margin-left: 25%;
       width: 66.66666667%;
       float: left;
@@ -48,6 +56,14 @@ const Card = styled.div`
     margin: 0 auto;
     margin-bottom: 40px;
 
+    `};
+    `};
+
+  ${props =>
+    !props.home &&
+    css`
+      display: inline-block;
+      margin: 1em;
     `};
 `;
 
@@ -93,7 +109,7 @@ const Shadow = styled.div`
 class Project extends Component {
   render() {
     return (
-      <Card>
+      <Card home={this.props.home}>
         <Browser>{this.props.children}</Browser>
         <Shadow />
         <div style={{ padding: "30px", paddingTop: "10px" }}>

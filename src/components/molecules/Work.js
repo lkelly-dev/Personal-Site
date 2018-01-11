@@ -82,6 +82,7 @@ class Work extends Component {
               description={indv_proj.description}
               link={indv_proj.link}
               title={indv_proj.title}
+              home={true}
               key={index}
             >
               <img

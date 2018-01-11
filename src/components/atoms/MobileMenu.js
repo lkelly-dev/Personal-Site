@@ -80,6 +80,9 @@ class MobileMenu extends Component {
                 >
                   About
                 </StyledLink>
+                <StyledLink exact={true} to="/projects" activeClassName="activeLink">
+                  Projects
+                </StyledLink>
               </LinkContainer>
             </Overlay>
             <Exit onClick={this.expand}>X</Exit>

@@ -141,6 +141,9 @@ class Navigation extends Component {
           <StyledLink exact={true} to="/about" activeClassName="activeLink">
             About
           </StyledLink>
+          <StyledLink exact={true} to="/projects" activeClassName="activeLink">
+            Projects
+          </StyledLink>
           {/* <StyledLink exact={true} to="/resume" activeClassName="activeLink">
           Resumé
         </StyledLink> */}

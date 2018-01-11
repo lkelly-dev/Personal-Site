@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import App from "./App";
 import Resume from "./components/organisms/resume";
 import About from "./components/organisms/about";
+import Projects from "./components/organisms/projects";
 
 class Routes extends Component {
   render() {
@@ -13,6 +14,7 @@ class Routes extends Component {
           <Route exact path="/" component={App} />
           <Route path="/resume" component={Resume} />
           <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>
