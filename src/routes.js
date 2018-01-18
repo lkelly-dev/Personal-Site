@@ -5,6 +5,8 @@ import App from "./App";
 import Resume from "./components/organisms/resume";
 import About from "./components/organisms/about";
 import Projects from "./components/organisms/projects";
+import Blog from "./components/Blog/Blog";
+import BlogPost from "./components/Blog/BlogPost";
 
 class Routes extends Component {
   render() {
@@ -15,6 +17,8 @@ class Routes extends Component {
           <Route path="/resume" component={Resume} />
           <Route path="/about" component={About} />
           <Route path="/projects" component={Projects} />
+          <Route exact path="/blog" component={Blog} />
+          <Route path="/blog/:postID" component={BlogPost} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>
@@ -23,3 +27,5 @@ class Routes extends Component {
 }
 
 export default Routes;
+
+//<Redirect to="/" />

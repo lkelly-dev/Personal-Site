@@ -65,13 +65,14 @@ class MobileMenu extends Component {
                 >
                   Home
                 </StyledLink>
-                <ExternalLink
+                <StyledLink
                   onClick={this.resetOverflow}
-                  href="https://medium.com/@liamkelly_46694"
+                  exact={true}
+                  to="/blog"
                   activeClassName="activeLink"
                 >
                   Blog
-                </ExternalLink>
+                </StyledLink>
                 <StyledLink
                   onClick={this.resetOverflow}
                   exact={true}
@@ -186,4 +187,4 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
-const ExternalLink = StyledLink.withComponent("a");
+//const ExternalLink = StyledLink.withComponent("a");
