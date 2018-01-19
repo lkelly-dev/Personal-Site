@@ -71,9 +71,14 @@ const BlogPost = styled.div`
 const StyledHeader = styled.h2`
   color: #49b882;
   margin-bottom: 2rem;
-  font-weight: 800;
+
   font-size: 1.9rem;
   position: relative;
+  font-family: "Lato", sans-serif;
+
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
   &:after {
     position: absolute;
     content: "";
@@ -95,6 +100,7 @@ const StyledLink = styled(Link)`
   display: block;
   margin-bottom: 1rem;
   color: #193652;
+  font-family: "Varela Round", "sans-serif";
 `;
 
 const SubInfo = styled.span`

@@ -88,6 +88,11 @@ const Title = styled.h1`
   margin-top: 1 rem;
   text-align: center;
   color: #49b882;
+  font-family: "Lato", sans-serif;
+
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
 `;
 
 const Markdown = styled.div`
